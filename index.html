@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/obmerny_plan/index.html">Обмерный план</a>
+
+    <div class="checklist">
+      <div class="checklist__progress-circle">
+        <svg
+          class="checklist__progress-circle-bg"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="50%" cy="50%" r="calc(50% - 1px)" />
+          <circle cx="50%" cy="50%" r="calc(50% - 1px)" />
+        </svg>
+        <p class="checklist__progress-circle-text">0/7</p>
+      </div>
+
+      <div class="checklist__content content">
+        <p class="content__title">Чеклист</p>
+        <p class="content__progress">Выполнено: 0 из 7 действий</p>
+        <p class="content__info">
+          Следующее действие: Созвониться с клиентом до 23.05.24 12:00
+        </p>
+      </div>
+
+      <div class="checklist__controlls">
+        <button>Открыть чеклист</button>
+      </div>
+    </div>
+  </body>
+</html>

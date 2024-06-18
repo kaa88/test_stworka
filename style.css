@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  --progress: 0;
+  --color-primary: #fff;
+  --color-secondary: #3579f5;
+  --color-accent: #2364db;
+  --color-accent2: #4777ed;
+  font-family: Inter;
+  padding: 10px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist {
+  margin-top: 20px;
+  max-width: 743px;
+  min-height: 91px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  border-radius: 10px;
+  padding: 12px 18px 12px 6px;
+}
+.checklist__progress-circle {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checklist__progress-circle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+}
+.checklist__progress-circle-bg circle {
+  fill: transparent;
+  stroke: var(--color-primary);
+}
+.checklist__progress-circle-bg circle:first-child {
+  stroke-width: 1px;
+  opacity: 0.5;
+}
+.checklist__progress-circle-bg circle:last-child {
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 300;
+  stroke-dashoffset: calc(357 - 180 * var(--progress) / 100);
+}
+.checklist__progress-circle-text {
+  font-size: 20px;
+}
+
+.checklist__content {
+  flex: 1 1 auto;
+  margin-right: 16px;
+}
+.checklist__controlls {
+  flex: 0 0 auto;
+}
+.checklist__controlls button {
+  height: 40px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--color-accent2);
+  cursor: pointer;
+}
+.content__title {
+  display: inline-block;
+  padding: 0 13px;
+  border-radius: 40px;
+  line-height: 18px;
+  background-color: var(--color-accent);
+  font-size: 12px;
+}
+.content__progress {
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.content__info {
+  margin-top: 4px;
+  font-size: 12px;
+}
